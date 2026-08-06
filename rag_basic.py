@@ -53,7 +53,7 @@ def rag_query(query):
     context = "\n\n".join([n.text for n in nodes])
 
     prompt = f"""
-    你是一个视频脚本创作助手。根据以下素材回答用户的问题。
+    根据以下素材，用3句话向用户推荐一个美食店铺。只使用素材中提到的信息，不要编造。
 
     素材：
     {context}
