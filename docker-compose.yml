@@ -1,0 +1,12 @@
+services:
+  rag-api:
+    build: .
+    ports:
+      - 8000:8000
+    volumes:
+      - ./data:/app/data
+      - ./model:/app/model
+      - ./chroma_db:/app/chroma_db
+    environment:
+      - OLLAMA_HOST=http://host.docker.internal:11434
+    restart: unless-stopped
